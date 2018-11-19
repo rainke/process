@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>process</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body{
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #tool {
+            height:50px;
+        }
+
+        #designer {
+            flex: 1;
+            display: flex;
+            /* overflow-y: scroll; */
+        }
+
+        #shape {
+            width: 120px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
+        #shape .item {
+            padding: 5px;
+        }
+
+        #draw {
+            flex: 1;
+        }
+
+        svg {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div id="tool">toolbar</div>
+    <div id="designer">
+        <div id="shape">
+            <div class="item" data-shape="0" draggable="true">正方形</div>
+            <div class="item" data-shape="1" draggable="true">圆形</div>
+            <div class="item" data-shape="2" draggable="true">菱形</div>
+        </div>
+        <div id="draw"></div>   
+    </div>
+</body>
+</html>
